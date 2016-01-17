@@ -1,0 +1,10 @@
+<h3>Please enter your phone number</h3>
+
+<form name="numberForm"
+      ng-submit="inputCtrl.submitNumber(mainCtrl, logCtrl)">
+    <div class="form-group">
+        <input ng-model="inputCtrl.number" type="text" class="form-control" id="phone" placeholder="+491234556">
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

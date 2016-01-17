@@ -1,0 +1,26 @@
+<hr />
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <h3>Call Log:</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>caller</th>
+                <th>callee</th>
+                <th>start</th>
+                <th>duration</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="call in logCtrl.calls | orderBy:'-start'">
+                <td>{{call.caller}}</td>
+                <td>{{call.callee}}</td>
+                <td>{{call.start | date: 'MM/dd/yyyy @ HH:mm:ss'}}</td>
+                <td>{{call.duration}} s.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
